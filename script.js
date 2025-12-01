@@ -291,6 +291,25 @@ $(document).ready(function() {
         return c/2*((t-=2)*t*t + 2) + b;
     };
     
+    // Mobile Menu Toggle
+    $('#menu-toggle').on('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $('#mobile-slide-menu').toggleClass('active');
+    });
+    
+    // Close menu when clicking outside
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.menu-toggle, .mobile-slide-menu').length) {
+            $('#mobile-slide-menu').removeClass('active');
+        }
+    });
+    
+    // Close menu when clicking on menu items
+    $('.slide-menu-item').on('click', function() {
+        $('#mobile-slide-menu').removeClass('active');
+    });
+    
     // Console log for debugging
     console.log('RayRayLab Style Portfolio Loaded Successfully! 🎨');
     

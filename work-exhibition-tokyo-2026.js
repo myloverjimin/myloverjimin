@@ -349,6 +349,31 @@ $(document).ready(function() {
         return c/2*((t-=2)*t*t + 2) + b;
     };
     
+    // Mobile Menu Toggle
+    $(document).on('click', '#menu-toggle', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('Menu toggle clicked');
+        $('#mobile-slide-menu').toggleClass('active');
+        console.log('Menu active:', $('#mobile-slide-menu').hasClass('active'));
+    });
+    
+    // Close menu when clicking outside
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.menu-toggle, .mobile-slide-menu').length) {
+            $('#mobile-slide-menu').removeClass('active');
+        }
+    });
+    
+    // Close menu when clicking on menu items
+    $(document).on('click', '.slide-menu-item', function() {
+        $('#mobile-slide-menu').removeClass('active');
+    });
+    
+    // Debug: Check if elements exist
+    console.log('Menu toggle exists:', $('#menu-toggle').length);
+    console.log('Slide menu exists:', $('#mobile-slide-menu').length);
+    
     // Console log for debugging
     console.log('Luminous Style Commercial Film Page Loaded Successfully! 🎬');
     

@@ -369,6 +369,25 @@ $(document).ready(function() {
         return c/2*((t-=2)*t*t + 2) + b;
     };
     
+    // Mobile Menu Toggle
+    $(document).on('click', '#menu-toggle', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $('#mobile-slide-menu').toggleClass('active');
+    });
+    
+    // Close menu when clicking outside
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.menu-toggle, .mobile-slide-menu').length) {
+            $('#mobile-slide-menu').removeClass('active');
+        }
+    });
+    
+    // Close menu when clicking on menu items
+    $(document).on('click', '.slide-menu-item', function() {
+        $('#mobile-slide-menu').removeClass('active');
+    });
+    
     // Console log for debugging
     console.log('Work Page Loaded Successfully! 🎨');
     
