@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYLOVERJIMIN</title>
+    <link rel="stylesheet" href="test.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#top" style="color: inherit; text-decoration: none;">
+                    <span class="logo-main">MYLOVERJIMIN</span>
+                </a>
+            </div>
+            <nav class="navigation">
+                <a href="work-exhibition-seoul-2025-kr.html" class="nav-link nav-project">
+                    <span class="nav-full">EXHIBITION<br>SWEET SERENADE<br>in SEOUL</span>
+                    <span class="nav-short">SEOUL</span>
+                </a>
+                <a href="work-exhibition-tokyo-2026.html" class="nav-link nav-project">
+                    <span class="nav-full">EXHIBITION<br>SWEET SERENADE ENCORE<br>in TOKYO</span>
+                    <span class="nav-short">TOKYO</span>
+                </a>
+                <a href="work-season-greeting-2026-kr.html" class="nav-link nav-project">
+                    <span class="nav-full">2026 JIMIN<br>SEASON'S GREETING</span>
+                    <span class="nav-short">SG</span>
+                </a>
+                <a href="work-virtual-dvd-usb-kr.html" class="nav-link nav-project">
+                    <span class="nav-full">VIRTUAL DVD :: USB</span>
+                    <span class="nav-short">DVD</span>
+                </a>
+                <a href="#about" class="nav-link">ABOUT</a>
+                <a href="#contact" class="nav-link">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">
+                <span class="title-line">EXHIBITION</span>
+                <span class="title-line">SWEET</span>
+                <span class="title-line">SERENADE</span>
+            </h1>
+            <p class="hero-subtitle">2025-2026, MYLOVERJIMIN JIMIN EXHIBITION</p>
+            <div class="scroll-indicator">
+                <span class="arrow-down">↓</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Gallery -->
+    <section id="work" class="projects">
+        <div class="container">
+            <!-- Project 1 -->
+            <div class="project-card" data-project="1">
+                <div class="project-info" onclick="window.location.href='work-exhibition-seoul-2025-kr.html'" style="cursor: pointer;">
+                    <h2 class="project-title">
+                        <span class="title-line">2025 EXHIBITION</span>
+                        <span class="title-line">SWEET SERENADE</span>
+                        <span class="title-line">in SEOUL</span>
+                    </h2>
+                    <p class="project-description">2025.12.20(Sat)<br>SWEET SERENADE in SEOUL 서울 전시회</p>
+                </div>
+                <div class="project-thumbnail" onclick="window.location.href='work-exhibition-seoul-2025-kr.html'">
+                    <img src="img/tokyo_poster.jpg" alt="Seoul Exhibition" class="thumbnail-image">
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card" data-project="2">
+                <div class="project-thumbnail" onclick="window.location.href='work-exhibition-tokyo-2026.html'">
+                    <img src="img/tokyo_poster.jpg" alt="Tokyo Exhibition" class="thumbnail-image">
+                </div>
+                <div class="project-info" onclick="window.location.href='work-exhibition-tokyo-2026.html'" style="cursor: pointer;">
+                    <h2 class="project-title">
+                        <span class="title-line">2026 EXHIBITION</span>
+                        <span class="title-line">SWEET SERENADE ENCORE</span>
+                        <span class="title-line">in TOKYO</span>
+                    </h2>
+                    <p class="project-description">2026.01.10(土)-11(日)<br>SWEET SERENADE ENCORE in TOKYO 東京アンコール展示会</p>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card" data-project="3">
+                <div class="project-info" onclick="window.location.href='work-season-greeting-2026-kr.html'" style="cursor: pointer;">
+                    <h2 class="project-title">
+                        <span class="title-line">2026 JIMIN</span>
+                        <span class="title-line">SEASON'S GREETING</span>
+                    </h2>
+                    <p class="project-description">2026 지민 시즌그리팅 달력 & 담요 세트<br>A. CALENDAR & B. BLANKET SET & C.A+B</p>
+                </div>
+                <div class="project-thumbnail" onclick="window.location.href='work-season-greeting-2026-kr.html'">
+                    <img src="img/sg_img.jpg" alt="Season's Greeting" class="thumbnail-image">
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card" data-project="4">
+                <div class="project-thumbnail" onclick="window.location.href='work-virtual-dvd-usb-kr.html'">
+                    <img src="img/dvd_indeximg.jpg" alt="Virtual DVD USB" class="thumbnail-image">
+                </div>
+                <div class="project-info" onclick="window.location.href='work-virtual-dvd-usb-kr.html'" style="cursor: pointer;">
+                    <h2 class="project-title">
+                        <span class="title-line">VIRTUAL DVD :: USB</span>
+                    </h2>
+                    <p class="project-description">01.ONE&ONLY (2016~2020)<br>02.PINK ARCHIVE (2020~2024)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">MYLOVERJIMIN</h2>
+            <div class="about-content">
+                <p class="about-text-en">MYLOVERJIMIN site. Always with Jimin.</p>
+                <p class="about-text-kr">MYLOVERJIMIN 사이트입니다. 언제나 지민과 함께하고 있습니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="contact-title">
+                <a href="mailto:myloverjimin@gmail.com" style="color: inherit; text-decoration: none;">myloverjimin@gmail.com</a>
+            </h2>
+            <div class="contact-info">
+                <p class="contact-detail">©MYLOVERJIMIN ALL RIGHTS RESERVED</p>
+                <p class="contact-detail">
+                    <a href="https://x.com/myloverjimin" target="_blank" style="color: inherit; text-decoration: none;">TWITTER @MYLOVERJIMIN</a>
+                </p>
+                <p class="contact-detail">
+                    <a href="https://x.com/myloverjimin_JP" target="_blank" style="color: inherit; text-decoration: none;">JP TWITTER @MYLOVERJIMIN_JP</a>
+                </p>
+                <p class="contact-detail">
+                    <a href="https://www.instagram.com/myloverjimin/" target="_blank" style="color: inherit; text-decoration: none;">INSTA @MYLOVERJIMIN</a>
+                </p>
+                <p class="contact-detail">
+                    <a href="https://www.youtube.com/@myloverjimin" target="_blank" style="color: inherit; text-decoration: none;">YOUTUBE @MYLOVERJIMIN</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">©ALL CONTENT RESERVED BY MYLOVERJIMIN</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
