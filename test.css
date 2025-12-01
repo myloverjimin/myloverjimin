@@ -91,6 +91,10 @@ body {
   pointer-events: none;
 }
 
+.nav-mobile-only {
+  display: none;
+}
+
 .project-collection {
   width: 100%;
   padding: 40px 0 80px;
@@ -178,8 +182,8 @@ body {
   .header .container { height: 64px; padding: 0 20px; }
   .navigation { gap: 16px; }
   .navigation .nav-link { font-size: 12px; }
-  .nav-project .nav-full { display: none; }
-  .nav-project .nav-short { display: block; }
+  .nav-project { display: none !important; }
+  .nav-mobile-only { display: block !important; }
   .logo .logo-main, .logo .logo-sub { font-size: 16px; }
   .hero { padding: 60px 0; }
   .container { padding: 0 20px; }
@@ -330,8 +334,10 @@ body {
 }
 
 .project-card[data-project="3"] .project-thumbnail {
-  min-height: 500px;
-  max-height: 600px;
+  min-height: auto !important;
+  max-height: none !important;
+  height: auto !important;
+  display: inline-block;
   align-items: flex-start;
   padding-top: 0;
 }
@@ -353,9 +359,11 @@ body {
 
 .project-card[data-project="3"] .thumbnail-image {
   height: auto;
-  max-height: 100%;
+  width: 100%;
   object-fit: contain;
   object-position: top center;
+  display: block;
+  vertical-align: top;
 }
 
 .project-card[data-project="4"] .project-thumbnail {
@@ -554,10 +562,18 @@ body {
   .section-title {
     font-size: 32px;
   }
+  .header .container {
+    padding: 0 15px;
+  }
+  
   .navigation {
-    gap: 20px;
+    gap: 12px;
   }
   .navigation .nav-link {
-    font-size: 12px;
+    font-size: 11px;
+  }
+  
+  .logo .logo-main {
+    font-size: 14px;
   }
 }

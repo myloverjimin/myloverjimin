@@ -106,6 +106,10 @@ body {
     pointer-events: none;
 }
 
+.nav-mobile-only {
+    display: none;
+}
+
 /* Hero Section */
 .hero-section {
     min-height: 100vh;
@@ -194,6 +198,8 @@ body {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .story-text {
@@ -204,6 +210,9 @@ body {
     opacity: 0;
     transform: translateY(50px);
     animation: fadeInUp 1s ease 2.5s forwards;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
 /* Video Showcase */
@@ -322,6 +331,9 @@ body {
 
 .gallery-container {
     width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .main-image {
@@ -443,8 +455,8 @@ body {
     .navigation {
         gap: 16px;
     }
-    .nav-project .nav-full { display: none; }
-    .nav-project .nav-short { display: block; }
+    .nav-project { display: none !important; }
+    .nav-mobile-only { display: block !important; }
     .nav-link {
         font-size: 12px;
     }
@@ -459,19 +471,56 @@ body {
     .main-message .stories {
         font-size: 36px;
     }
+    .story-section {
+        padding: 60px 0;
+    }
+    
+    .story-section .container {
+        padding: 0 20px;
+    }
+    
+    .story-content {
+        padding: 0;
+        max-width: 100%;
+    }
+    
     .story-section .story-text {
         font-size: 14px;
         line-height: 1.6;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        max-width: 100%;
+    }
+    
+    .story-section .story-text a {
+        word-break: break-all;
     }
 
     .video-container { padding: 0 0; }
     .video-wrapper { position: relative; }
     .main-video { width: 100%; height: auto; aspect-ratio: 16/9; }
 
+    .gallery-container {
+        padding: 0 20px;
+        max-width: 100%;
+    }
+    
     .gallery-images {
         grid-template-columns: 1fr;
         gap: 20px;
+        max-width: 100%;
     }
+    
+    .main-image {
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .main-image .gallery-img {
+        max-width: 100%;
+        width: 100%;
+    }
+    
     .gallery-image img,
     .gallery-image video,
     .gallery-image iframe {
@@ -714,6 +763,13 @@ body {
 @media (max-width: 768px) {
     .container {
         padding: 0 20px;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    body {
+        overflow-x: hidden;
+        max-width: 100vw;
     }
     
     .stories {
@@ -767,6 +823,22 @@ body {
 }
 
 @media (max-width: 480px) {
+    .luminous-header .container {
+        padding: 0 15px;
+    }
+    
+    .navigation {
+        gap: 12px;
+    }
+    
+    .nav-link {
+        font-size: 11px;
+    }
+    
+    .logo .logo-main {
+        font-size: 14px;
+    }
+    
     .stories {
         font-size: 60px;
     }

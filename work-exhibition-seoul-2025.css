@@ -93,6 +93,14 @@ body {
   pointer-events: none;
 }
 
+.nav-mobile-only {
+  display: none;
+}
+
+.nav-desktop-only {
+  display: block;
+}
+
 .project-collection {
   padding: 160px 0 80px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -236,8 +244,9 @@ body {
   .work-header .container { height: 64px; padding: 0 20px; }
   .navigation { gap: 16px; }
   .navigation .nav-link { font-size: 12px; }
-  .nav-project .nav-full { display: none !important; }
-  .nav-project .nav-short { display: block !important; }
+  .nav-project { display: none !important; }
+  .nav-desktop-only { display: none !important; }
+  .nav-mobile-only { display: block !important; }
   .logo .logo-main { font-size: 16px; }
   .project-hero .container, .gallery-container, .project-video .container, .project-details .container, .next-project .container { padding: 0 20px; }
   .gallery-images { grid-template-columns: 1fr; gap: 16px; }
@@ -722,7 +731,7 @@ body {
   }
   
   .navigation {
-    gap: 16px;
+    gap: 12px;
   }
   
   .navigation .nav-link {
