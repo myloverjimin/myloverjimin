@@ -78,6 +78,25 @@ body {
   color: #1a1a1a;
 }
 
+.navigation .nav-lang + .nav-lang {
+  margin-left: -32px;
+}
+
+.navigation .nav-lang.active {
+  color: #1a1a1a;
+  position: relative;
+}
+
+.navigation .nav-lang.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #1a1a1a;
+}
+
 .nav-project {
   text-align: center;
   display: block;
@@ -235,7 +254,12 @@ body {
 @media (max-width: 768px) {
   .work-header .container { height: 64px; padding: 0 20px; }
   .navigation { gap: 16px; }
-  .navigation .nav-link { font-size: 12px; }
+  .navigation .nav-link { font-size: 12px; line-height: 1.2; }
+  .navigation .nav-lang + .nav-lang { margin-left: -8px; }
+  .navigation .nav-lang.active::after {
+    bottom: -2px;
+    height: 1px;
+  }
   .nav-project .nav-full { display: none !important; }
   .nav-project .nav-short { display: block !important; }
   .logo .logo-main { font-size: 16px; }
